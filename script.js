@@ -60,6 +60,8 @@ var parcelasInput = document.getElementById("parcelas");
 var taxaValor = document.getElementById("taxa-valor");
 var taxaFonte = document.getElementById("taxa-fonte");
 var taxaReferencia = document.getElementById("taxa-referencia");
+var parcelasMinimas = 48;
+var parcelasMaximas = 108;
 
 // Recebe somente dados já validados. Um endpoint PHP futuro deverá entregar
 // a taxa mensal e os metadados da fonte neste mesmo formato.
@@ -152,13 +154,13 @@ botaoCalcular.addEventListener("click", function () {
     !Number.isFinite(valorNumerico) ||
     valorNumerico <= 0 ||
     !Number.isInteger(parcelasNumericas) ||
-    parcelasNumericas < 1 ||
-    parcelasNumericas > 84 ||
+    parcelasNumericas < parcelasMinimas ||
+    parcelasNumericas > parcelasMaximas ||
     !Number.isFinite(taxa) ||
     taxa < 0
   ) {
     resultado.textContent =
-      "Revise os dados: informe um valor maior que zero e entre 1 e 84 parcelas inteiras.";
+      "Revise os dados: informe um valor maior que zero e entre 48 e 108 parcelas inteiras.";
     return;
   }
 
