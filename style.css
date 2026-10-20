@@ -1,15 +1,15 @@
 :root {
-  --verde-escuro: #123d35;
-  --verde: #1d5b4f;
-  --verde-claro: #e7f1ed;
-  --creme: #f7f8f5;
-  --branco: #ffffff;
-  --texto: #24332f;
-  --texto-suave: #5b6b66;
-  --dourado: #d89d3d;
-  --dourado-escuro: #a86f18;
-  --borda: #dce6e1;
-  --sombra: 0 1rem 2.5rem rgba(18, 61, 53, 0.09);
+  --verde-escuro: #4a0e2b;
+  --verde: #761640;
+  --verde-claro: #f3e5eb;
+  --creme: #f8f3ea;
+  --branco: #fffaf2;
+  --texto: #35242b;
+  --texto-suave: #705d65;
+  --dourado: #d7ad22;
+  --dourado-escuro: #967313;
+  --borda: #e7d5dc;
+  --sombra: 0 1rem 2.5rem rgba(74, 14, 43, 0.12);
 }
 
 * {
@@ -25,7 +25,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   color: var(--texto);
-  background-color: var(--creme);
+  background: linear-gradient(
+    135deg,
+    #4a0e2b 0%,
+    #761640 28%,
+    #d7ad22 62%,
+    #f8f3ea 100%
+  );
+  background-attachment: fixed;
   line-height: 1.6;
 }
 
@@ -53,29 +60,28 @@ header {
 }
 
 .marca-simbolo {
-  display: grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 0.75rem;
-  color: var(--dourado);
-  font-weight: 800;
-  letter-spacing: -0.08em;
+  display: block;
+  width: auto;
+  height: clamp(2.5rem, 5vw, 3.25rem);
+  object-fit: contain;
 }
 
-.marca strong,
+.marca-texto {
+  display: block;
+  min-width: 0;
+}
+
+.marca-nome {
+  display: block;
+  width: clamp(9rem, 20vw, 12rem);
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .marca small {
   display: block;
-}
-
-.marca strong {
-  font-family: Arial, sans-serif;
-  font-size: 1.05rem;
-}
-
-.marca small {
-  color: #c3d4cf;
+  color: #ead4de;
   font-size: 0.7rem;
 }
 
@@ -86,7 +92,7 @@ header {
   padding: 0.65rem 1rem;
   background-color: transparent;
   color: var(--branco);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 250, 242, 0.5);
   border-radius: 0.5rem;
   cursor: pointer;
   font-weight: bold;
@@ -114,7 +120,7 @@ header {
 }
 
 #menu a {
-  color: #e6efec;
+  color: #f4e5eb;
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
@@ -127,6 +133,7 @@ header {
 
 section {
   padding: 5.5rem 6%;
+  background-color: rgba(248, 243, 234, 0.74);
 }
 
 .hero {
@@ -135,7 +142,11 @@ section {
   justify-content: center;
   align-items: center;
   gap: clamp(2rem, 7vw, 7rem);
-  background: linear-gradient(135deg, #f0f6f2 0%, var(--creme) 68%);
+  background: linear-gradient(
+    135deg,
+    rgba(248, 243, 234, 0.68) 0%,
+    rgba(245, 233, 223, 0.78) 68%
+  );
 }
 
 .hero-conteudo {
@@ -177,7 +188,7 @@ section {
 }
 
 .cartao-etiqueta {
-  color: #cae1d8;
+  color: #f1dca4;
   font-size: 0.78rem;
   font-weight: bold;
   letter-spacing: 0.08em;
@@ -205,18 +216,18 @@ section {
 }
 
 .hero-cartao p {
-  color: #deebe6;
+  color: #f4e4ea;
   font-size: 0.95rem;
 }
 
 .cartao-linha {
   height: 1px;
   margin: 1.5rem 0 1rem;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 250, 242, 0.24);
 }
 
 .hero-cartao small {
-  color: #c3d4cf;
+  color: #ead4de;
 }
 
 .botao {
@@ -288,7 +299,7 @@ section h2 {
   border: 1px solid var(--borda);
   padding: 1.75rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(18, 61, 53, 0.04);
+  box-shadow: 0 0.5rem 1.5rem rgba(74, 14, 43, 0.06);
 }
 
 .destaque-card {
@@ -314,7 +325,7 @@ section h2 {
 }
 
 .secao-clara {
-  background-color: var(--verde-claro);
+  background-color: rgba(243, 229, 235, 0.78);
 }
 
 .servico {
@@ -356,7 +367,7 @@ input,
 textarea {
   padding: 0.8rem 0.9rem;
   width: 100%;
-  border: 1px solid #bdcec7;
+  border: 1px solid #d8c0c9;
   border-radius: 0.45rem;
   font: inherit;
   font-size: 1em;
@@ -521,7 +532,7 @@ textarea:focus-visible {
   border-left: 0.25rem solid var(--dourado);
   border-radius: 0.75rem;
   background-color: var(--verde-escuro);
-  color: #d9e7e2;
+  color: #f0dfe6;
   font-style: normal;
 }
 
@@ -551,8 +562,10 @@ textarea:focus-visible {
   color: var(--branco);
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 0.5rem 1rem rgba(18, 61, 53, 0.15);
-  transition: background-color 160ms ease, transform 160ms ease,
+  box-shadow: 0 0.5rem 1rem rgba(74, 14, 43, 0.15);
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease,
     box-shadow 160ms ease;
 }
 
@@ -560,7 +573,7 @@ textarea:focus-visible {
   background-color: #0f713b;
   color: var(--branco);
   transform: translateY(-0.15rem);
-  box-shadow: 0 0.75rem 1.25rem rgba(18, 61, 53, 0.2);
+  box-shadow: 0 0.75rem 1.25rem rgba(74, 14, 43, 0.2);
 }
 
 .icone-whatsapp {
@@ -571,7 +584,7 @@ textarea:focus-visible {
 
 footer {
   background-color: var(--verde-escuro);
-  color: #d9e7e2;
+  color: #f0dfe6;
   text-align: center;
   padding: 2rem 6%;
 }
