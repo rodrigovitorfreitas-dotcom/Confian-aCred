@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4a0e2b" />
+    <meta
+      name="description"
+      content="Confiança Cred: empréstimo consignado, refinanciamento e portabilidade para aposentados e pensionistas do INSS em Andradina-SP."
+    />
     <title>Confiança Cred - Empréstimo Consignado</title>
-    <link rel="stylesheet" href="style.css?v=20261020-gradient" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261113-pro2" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
   <body>
-    <header>
+    <div class="progresso-rolagem" aria-hidden="true"></div>
+
+    <header id="topo">
       <div class="cabecalho">
         <a class="marca" href="#inicio" aria-label="Confiança Cred - início">
           <img
@@ -26,294 +42,484 @@
             <small>Informação para decidir melhor</small>
           </span>
         </a>
+
+        <nav id="menu" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#simulador">Simulação</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <a href="#simulador" class="botao botao-topo">Simular agora</a>
+
         <button
           id="botao-menu"
           type="button"
           aria-controls="menu"
           aria-expanded="false"
         >
-          <span aria-hidden="true">☰</span>
+          <span class="icone-menu" aria-hidden="true"><i></i><i></i><i></i></span>
           Menu
         </button>
       </div>
-
-      <nav id="menu">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#simulador">Simulação</a></li>
-          <li><a href="#faq">Dúvidas</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
+      <!-- ===================== HERO ===================== -->
       <section id="inicio" class="hero">
-        <div class="hero-conteudo">
-          <p class="destaque">
-            <span aria-hidden="true">●</span> Atendimento em Andradina-SP
-          </p>
-          <h2>Crédito explicado de forma simples e humana</h2>
-          <p>
-            A Confiança Cred atende aposentados e pensionistas do INSS com
-            atendimento próximo e clareza em cada etapa.
-          </p>
-
-          <a href="#simulador" class="botao">Simular meu empréstimo</a>
-          <a href="#sobre" class="botao botao-secundario"
-            >Conheça a Confiança Cred</a
-          >
+        <div class="hero-fundo" aria-hidden="true">
+          <span class="bolha bolha-1"></span>
+          <span class="bolha bolha-2"></span>
+          <span class="bolha bolha-3"></span>
+          <span class="grade"></span>
         </div>
 
-        <div class="hero-cartao">
-          <span class="cartao-etiqueta">Nosso compromisso</span>
-          <div class="cartao-icone" aria-hidden="true">✓</div>
-          <h3>Atendimento com clareza</h3>
-          <p>Você entende as condições antes de tomar uma decisão.</p>
-          <div class="cartao-linha"></div>
-          <small
-            >Consignado &middot; Refinanciamento &middot; Portabilidade</small
-          >
+        <div class="hero-interno">
+          <div class="hero-conteudo">
+            <p class="destaque" data-reveal>
+              <span class="ponto-pulso" aria-hidden="true"></span> Atendimento
+              em Andradina-SP
+            </p>
+            <h1 data-reveal data-atraso="1">
+              Crédito explicado de forma
+              <em>simples e humana</em>
+            </h1>
+            <p class="hero-texto" data-reveal data-atraso="2">
+              A Confiança Cred atende aposentados e pensionistas do INSS com
+              atendimento próximo e clareza em cada etapa.
+            </p>
+
+            <div class="hero-acoes" data-reveal data-atraso="3">
+              <a href="#simulador" class="botao botao-brilho">
+                Simular meu empréstimo
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+              <a href="#sobre" class="botao botao-secundario"
+                >Conheça a Confiança Cred</a
+              >
+            </div>
+
+            <ul class="hero-selos" data-reveal data-atraso="4">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg>
+                Condições apresentadas antes do contrato
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7" /><path d="M5 10v10h14V10" /></svg>
+                Presencial ou visita domiciliar
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" data-reveal data-atraso="2">
+            <div class="hero-cartao">
+              <span class="cartao-etiqueta">Nosso compromisso</span>
+              <div class="cartao-icone" aria-hidden="true">✓</div>
+              <h3>Atendimento com clareza</h3>
+              <p>Você entende as condições antes de tomar uma decisão.</p>
+              <div class="cartao-linha"></div>
+              <small
+                >Consignado &middot; Refinanciamento &middot; Portabilidade</small
+              >
+            </div>
+
+            <div class="cartao-flutuante cartao-flutuante-1" aria-hidden="true">
+              <span class="mini-icone">%</span>
+              <div>
+                <small>Simulação</small>
+                <strong>48 a 108 parcelas</strong>
+              </div>
+            </div>
+
+            <div class="cartao-flutuante cartao-flutuante-2" aria-hidden="true">
+              <img src="images/logo-simbolo.png" alt="" />
+              <div>
+                <small>Exclusivo</small>
+                <strong>Aposentados e pensionistas INSS</strong>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <a href="#sobre" class="indicador-rolar" aria-label="Rolar para a seção Sobre">
+          <span></span>
+        </a>
       </section>
 
+      <!-- Faixa animada -->
+      <div class="faixa" aria-hidden="true">
+        <div class="faixa-trilho">
+          <span>Empréstimo consignado INSS</span><b>✦</b>
+          <span>Refinanciamento</span><b>✦</b>
+          <span>Portabilidade</span><b>✦</b>
+          <span>Atendimento presencial</span><b>✦</b>
+          <span>Visita domiciliar agendada</span><b>✦</b>
+          <span>Andradina-SP</span><b>✦</b>
+          <span>Empréstimo consignado INSS</span><b>✦</b>
+          <span>Refinanciamento</span><b>✦</b>
+          <span>Portabilidade</span><b>✦</b>
+          <span>Atendimento presencial</span><b>✦</b>
+          <span>Visita domiciliar agendada</span><b>✦</b>
+          <span>Andradina-SP</span><b>✦</b>
+        </div>
+      </div>
+
+      <!-- ===================== QUEM SOMOS ===================== -->
       <section id="sobre">
-        <div class="titulo-secao">
-          <p class="pequeno-titulo">QUEM SOMOS</p>
-          <h2>Sobre a Confiança Cred</h2>
+        <div class="sobre-grid">
+          <div class="sobre-texto">
+            <div class="titulo-secao titulo-esquerda" data-reveal>
+              <p class="pequeno-titulo">QUEM SOMOS</p>
+              <h2>Sobre a <em>Confiança Cred</em></h2>
+            </div>
+
+            <p class="texto-centralizado" data-reveal data-atraso="1">
+              Somos uma financeira de Andradina-SP. Atendemos aposentados e
+              pensionistas do INSS que precisam de empréstimo consignado,
+              refinanciamento ou portabilidade, sempre explicando tudo antes de
+              qualquer contrato ser assinado.
+            </p>
+          </div>
+
+          <div class="destaques">
+            <article class="destaque-card" data-reveal data-atraso="1">
+              <span class="card-icone" aria-hidden="true">01</span>
+              <div>
+                <h3>Atendimento próximo</h3>
+                <p>
+                  Atendimento presencial para quem prefere conversar
+                  pessoalmente.
+                </p>
+              </div>
+            </article>
+
+            <article class="destaque-card" data-reveal data-atraso="2">
+              <span class="card-icone" aria-hidden="true">02</span>
+              <div>
+                <h3>Informação clara</h3>
+                <p>
+                  As condições da proposta são apresentadas antes da
+                  contratação.
+                </p>
+              </div>
+            </article>
+
+            <article class="destaque-card" data-reveal data-atraso="3">
+              <span class="card-icone" aria-hidden="true">03</span>
+              <div>
+                <h3>Decisão tranquila</h3>
+                <p>Você pode analisar a simulação antes de tomar sua decisão.</p>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <p class="texto-centralizado">
-          Somos uma financeira de Andradina-SP. Atendemos aposentados e
-          pensionistas do INSS que precisam de empréstimo consignado,
-          refinanciamento ou portabilidade, sempre explicando tudo antes de
-          qualquer contrato ser assinado.
-        </p>
+        <!-- ===== GALERIA ===== -->
+        <div class="galeria" id="galeria">
+          <div class="galeria-topo" data-reveal>
+            <div>
+              <p class="pequeno-titulo">GALERIA</p>
+              <h3>Conheça nosso espaço e nossa equipe</h3>
+            </div>
+            <div class="galeria-filtros" role="group" aria-label="Filtrar galeria">
+              <button type="button" class="filtro ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+              <button type="button" class="filtro" data-filtro="foto" aria-pressed="false">Fotos</button>
+              <button type="button" class="filtro" data-filtro="video" aria-pressed="false">Vídeos</button>
+            </div>
+          </div>
 
-        <div class="destaques">
-          <article class="destaque-card">
-            <span class="card-icone" aria-hidden="true">01</span>
-            <h3>Atendimento próximo</h3>
-            <p>
-              Atendimento presencial para quem prefere conversar pessoalmente.
-            </p>
-          </article>
-
-          <article class="destaque-card">
-            <span class="card-icone" aria-hidden="true">02</span>
-            <h3>Informação clara</h3>
-            <p>
-              As condições da proposta são apresentadas antes da contratação.
-            </p>
-          </article>
-
-          <article class="destaque-card">
-            <span class="card-icone" aria-hidden="true">03</span>
-            <h3>Decisão tranquila</h3>
-            <p>Você pode analisar a simulação antes de tomar sua decisão.</p>
-          </article>
+          <!--
+            COMO ADICIONAR FOTOS E VÍDEOS:
+            1. Coloque os arquivos na pasta images/galeria/
+            2. Em cada item abaixo, preencha:
+               - data-tipo="foto" ou data-tipo="video"
+               - data-src="images/galeria/nome-do-arquivo.jpg"  (foto ou vídeo .mp4)
+                 Para vídeo do YouTube, use o link: https://www.youtube.com/watch?v=CODIGO
+               - data-capa="images/galeria/capa.jpg" (opcional, capa do vídeo)
+               - data-legenda="Texto que aparece na foto"
+            Itens sem data-src aparecem como espaço reservado ("Em breve").
+            Para mais itens, copie um bloco <button class="galeria-item">.
+          -->
+          <div class="galeria-grade">
+            <button type="button" class="galeria-item item-grande" data-reveal
+              data-tipo="foto" data-src="" data-legenda="Nossa loja no centro de Andradina">
+            </button>
+            <button type="button" class="galeria-item" data-reveal data-atraso="1"
+              data-tipo="foto" data-src="" data-legenda="Equipe Confiança Cred">
+            </button>
+            <button type="button" class="galeria-item" data-reveal data-atraso="2"
+              data-tipo="video" data-src="" data-capa="" data-legenda="Vídeo institucional">
+            </button>
+            <button type="button" class="galeria-item" data-reveal data-atraso="1"
+              data-tipo="foto" data-src="" data-legenda="Atendimento ao cliente">
+            </button>
+            <button type="button" class="galeria-item" data-reveal data-atraso="2"
+              data-tipo="video" data-src="" data-capa="" data-legenda="Depoimentos de clientes">
+            </button>
+          </div>
         </div>
       </section>
 
+      <!-- ===================== SERVIÇOS ===================== -->
       <section id="servicos" class="secao-clara">
-        <div class="titulo-secao">
+        <div class="titulo-secao" data-reveal>
           <p class="pequeno-titulo">O QUE FAZEMOS</p>
           <h2>Nossos serviços</h2>
         </div>
 
         <div class="servicos-container">
-          <article class="servico">
-            <span class="numero-servico">01</span>
+          <article class="servico" data-reveal data-atraso="1">
+            <div class="servico-topo">
+              <span class="servico-icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" /><path d="M3 10h18M7 15h4" /></svg>
+              </span>
+              <span class="numero-servico">01</span>
+            </div>
             <h3>Empréstimo consignado INSS</h3>
             <p>
               Valor liberado com desconto direto no benefício, conforme as
               condições disponíveis para o cliente.
             </p>
+            <a href="#simulador" class="servico-link">Simular <span aria-hidden="true">→</span></a>
           </article>
 
-          <article class="servico">
-            <span class="numero-servico">02</span>
+          <article class="servico" data-reveal data-atraso="2">
+            <div class="servico-topo">
+              <span class="servico-icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.6-4.5L4 8" /><path d="M4 3v5h5" /><path d="M4 13a8 8 0 0 0 14.6 4.5L20 16" /><path d="M20 21v-5h-5" /></svg>
+              </span>
+              <span class="numero-servico">02</span>
+            </div>
             <h3>Refinanciamento</h3>
             <p>
               Analisamos o contrato existente e apresentamos uma nova condição
               para avaliação do cliente.
             </p>
+            <a href="#contato" class="servico-link">Falar com a equipe <span aria-hidden="true">→</span></a>
           </article>
 
-          <article class="servico">
-            <span class="numero-servico">03</span>
+          <article class="servico" data-reveal data-atraso="3">
+            <div class="servico-topo">
+              <span class="servico-icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3" /></svg>
+              </span>
+              <span class="numero-servico">03</span>
+            </div>
             <h3>Portabilidade</h3>
             <p>
               Possibilidade de transferir o contrato para outra instituição
               quando houver uma condição adequada.
             </p>
+            <a href="#contato" class="servico-link">Falar com a equipe <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </section>
 
+      <!-- ===================== SIMULADOR ===================== -->
       <section id="simulador">
-        <div class="titulo-secao">
-          <p class="pequeno-titulo">FAÇA UMA ESTIMATIVA</p>
-          <h2>Simule seu empréstimo</h2>
-          <p>Informe o valor desejado e a quantidade de parcelas.</p>
-        </div>
+        <div class="simulador-grid">
+          <div class="simulador-intro">
+            <div class="titulo-secao titulo-esquerda" data-reveal>
+              <p class="pequeno-titulo">FAÇA UMA ESTIMATIVA</p>
+              <h2>Simule seu <em>empréstimo</em></h2>
+              <p>Informe o valor desejado e a quantidade de parcelas.</p>
+            </div>
 
-        <div class="simulador-box">
-          <div class="campo">
-            <label for="valor">Valor do empréstimo (R$):</label>
-            <input
-              type="text"
-              id="valor"
-              inputmode="decimal"
-              autocomplete="off"
-              placeholder="Exemplo: 10.000,00"
-              aria-describedby="ajuda-valor"
-            />
-            <small id="ajuda-valor" class="ajuda-campo">
-              Digite o valor em reais. A formatação será aplicada
-              automaticamente.
-            </small>
+            <ul class="simulador-beneficios" data-reveal data-atraso="1">
+              <li>
+                <span aria-hidden="true">1</span>
+                <div><strong>Digite o valor</strong> A formatação em reais é automática.</div>
+              </li>
+              <li>
+                <span aria-hidden="true">2</span>
+                <div><strong>Escolha as parcelas</strong> Entre 48 e 108 parcelas.</div>
+              </li>
+              <li>
+                <span aria-hidden="true">3</span>
+                <div><strong>Veja a estimativa</strong> Parcela e total estimado na hora.</div>
+              </li>
+            </ul>
           </div>
 
-          <div class="campo">
-            <label for="parcelas">Número de parcelas:</label>
-            <input
-              type="number"
-              id="parcelas"
-              min="48"
-              max="108"
-              step="1"
-              inputmode="numeric"
-              placeholder="Exemplo: 48"
-              aria-describedby="ajuda-parcelas"
-            />
-            <small id="ajuda-parcelas" class="ajuda-campo">
-              Informe um número inteiro entre 48 e 108 parcelas.
-            </small>
-            <small class="ajuda-campo">
-              Para simulações com menos de 48 parcelas, entre em contato
-              pessoalmente com nossa equipe.
-            </small>
+          <div class="simulador-box" data-reveal data-atraso="2">
+            <div class="simulador-cabecalho" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <p>Simulador Confiança Cred</p>
+            </div>
+
+            <div class="campo">
+              <label for="valor">Valor do empréstimo (R$):</label>
+              <input
+                type="text"
+                id="valor"
+                inputmode="decimal"
+                autocomplete="off"
+                placeholder="Exemplo: 10.000,00"
+                aria-describedby="ajuda-valor"
+              />
+              <small id="ajuda-valor" class="ajuda-campo">
+                Digite o valor em reais. A formatação será aplicada
+                automaticamente.
+              </small>
+            </div>
+
+            <div class="campo">
+              <label for="parcelas">Número de parcelas:</label>
+              <input
+                type="number"
+                id="parcelas"
+                min="48"
+                max="108"
+                step="1"
+                inputmode="numeric"
+                placeholder="Exemplo: 48"
+                aria-describedby="ajuda-parcelas"
+              />
+              <small id="ajuda-parcelas" class="ajuda-campo">
+                Informe um número inteiro entre 48 e 108 parcelas.
+              </small>
+              <small class="ajuda-campo">
+                Para simulações com menos de 48 parcelas, entre em contato
+                pessoalmente com nossa equipe.
+              </small>
+            </div>
+
+            <button id="botao-calcular" type="button">Calcular simulação</button>
+
+            <div id="resultado" role="status" aria-live="polite">
+              O resultado da simulação aparecerá aqui.
+            </div>
+
+            <div class="referencia-taxa">
+              <strong>Taxa usada nesta demonstração</strong>
+              <p id="taxa-valor">1,85% ao mês</p>
+              <small id="taxa-fonte">
+                Fonte: parâmetro demonstrativo local. Não é uma taxa oficial e
+                não representa uma condição comercial real.
+              </small>
+              <small id="taxa-referencia">
+                Data de referência: 20/10/2026, sem consulta oficial.
+              </small>
+            </div>
+
+            <p class="aviso">
+              Esta é uma simulação estimativa, não uma proposta ou garantia de
+              aprovação. A taxa de juros, o valor das parcelas e o custo total
+              podem variar conforme as condições da operação e a análise da
+              instituição financeira. Para confirmar as condições disponíveis,
+              entre em contato com a Confiança Cred.
+            </p>
           </div>
-
-          <button id="botao-calcular" type="button">Calcular simulação</button>
-
-          <div id="resultado" role="status" aria-live="polite">
-            O resultado da simulação aparecerá aqui.
-          </div>
-
-          <div class="referencia-taxa">
-            <strong>Taxa usada nesta demonstração</strong>
-            <p id="taxa-valor">1,85% ao mês</p>
-            <small id="taxa-fonte">
-              Fonte: parâmetro demonstrativo local. Não é uma taxa oficial e não
-              representa uma condição comercial real.
-            </small>
-            <small id="taxa-referencia">
-              Data de referência: 20/10/2026, sem consulta oficial.
-            </small>
-          </div>
-
-          <p class="aviso">
-            Esta é uma simulação estimativa, não uma proposta ou garantia de
-            aprovação. A taxa de juros, o valor das parcelas e o custo total
-            podem variar conforme as condições da operação e a análise da
-            instituição financeira. Para confirmar as condições disponíveis,
-            entre em contato com a Confiança Cred.
-          </p>
         </div>
       </section>
 
+      <!-- ===================== COMO FUNCIONA ===================== -->
       <section id="como-funciona" class="secao-clara">
-        <div class="titulo-secao">
+        <div class="titulo-secao" data-reveal>
           <p class="pequeno-titulo">PASSO A PASSO</p>
           <h2>Como funciona</h2>
         </div>
 
         <ol class="passos">
-          <li>
+          <li data-reveal data-atraso="1">
             <strong>Entre em contato</strong>
             <span>Conte o que você precisa e tire suas dúvidas.</span>
           </li>
-          <li>
+          <li data-reveal data-atraso="2">
             <strong>Faça uma simulação</strong>
             <span>Apresentamos uma estimativa das condições.</span>
           </li>
-          <li>
+          <li data-reveal data-atraso="3">
             <strong>Analise com calma</strong>
             <span>Você conhece as condições antes de decidir.</span>
           </li>
-          <li>
+          <li data-reveal data-atraso="4">
             <strong>Finalize a contratação</strong>
             <span>Após a aprovação e assinatura, o processo é concluído.</span>
           </li>
         </ol>
       </section>
 
+      <!-- ===================== FAQ ===================== -->
       <section id="faq">
-        <div class="titulo-secao">
-          <p class="pequeno-titulo">DÚVIDAS</p>
-          <h2>Perguntas frequentes</h2>
-        </div>
+        <div class="faq-grid">
+          <div class="titulo-secao titulo-esquerda" data-reveal>
+            <p class="pequeno-titulo">DÚVIDAS</p>
+            <h2>Perguntas frequentes</h2>
+            <p>
+              Não encontrou o que procurava? Fale com nossa equipe pelo
+              WhatsApp.
+            </p>
+            <a href="#contato" class="botao botao-secundario">Falar com a equipe</a>
+          </div>
 
-        <div class="faq-container">
-          <button
-            id="pergunta1"
-            class="pergunta"
-            type="button"
-            aria-controls="resposta1"
-            aria-expanded="false"
-          >
-            Quem pode contratar o empréstimo consignado?
-            <span>+</span>
-          </button>
-          <p id="resposta1" class="resposta" hidden>
-            Aposentados e pensionistas do INSS que tenham margem disponível no
-            benefício.
-          </p>
+          <div class="faq-container" data-reveal data-atraso="1">
+            <button
+              id="pergunta1"
+              class="pergunta"
+              type="button"
+              aria-controls="resposta1"
+              aria-expanded="false"
+            >
+              Quem pode contratar o empréstimo consignado?
+              <span>+</span>
+            </button>
+            <p id="resposta1" class="resposta" hidden>
+              Aposentados e pensionistas do INSS que tenham margem disponível no
+              benefício.
+            </p>
 
-          <button
-            id="pergunta2"
-            class="pergunta"
-            type="button"
-            aria-controls="resposta2"
-            aria-expanded="false"
-          >
-            Preciso ir até a loja?
-            <span>+</span>
-          </button>
-          <p id="resposta2" class="resposta" hidden>
-            Não é obrigatório, mas atendemos presencialmente em Andradina-SP
-            para quem preferir.
-          </p>
+            <button
+              id="pergunta2"
+              class="pergunta"
+              type="button"
+              aria-controls="resposta2"
+              aria-expanded="false"
+            >
+              Preciso ir até a loja?
+              <span>+</span>
+            </button>
+            <p id="resposta2" class="resposta" hidden>
+              Não é obrigatório, mas atendemos presencialmente em Andradina-SP
+              para quem preferir.
+            </p>
 
-          <button
-            id="pergunta3"
-            class="pergunta"
-            type="button"
-            aria-controls="resposta3"
-            aria-expanded="false"
-          >
-            A parcela pode mudar depois de fechado o contrato?
-            <span>+</span>
-          </button>
-          <p id="resposta3" class="resposta" hidden>
-            Em uma operação com parcela fixa, o valor da parcela é definido no
-            contrato.
-          </p>
+            <button
+              id="pergunta3"
+              class="pergunta"
+              type="button"
+              aria-controls="resposta3"
+              aria-expanded="false"
+            >
+              A parcela pode mudar depois de fechado o contrato?
+              <span>+</span>
+            </button>
+            <p id="resposta3" class="resposta" hidden>
+              Em uma operação com parcela fixa, o valor da parcela é definido no
+              contrato.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section id="contato" class="contato secao-clara">
-        <div class="titulo-secao">
+      <!-- ===================== CONTATO ===================== -->
+      <section id="contato" class="contato">
+        <div class="hero-fundo" aria-hidden="true">
+          <span class="bolha bolha-1"></span>
+          <span class="bolha bolha-2"></span>
+        </div>
+
+        <div class="titulo-secao" data-reveal>
           <p class="pequeno-titulo">FALE CONOSCO</p>
           <h2>Entre em contato com nossa equipe</h2>
         </div>
 
         <div class="contato-container">
-          <address class="dados-contato">
+          <address class="dados-contato" data-reveal data-atraso="1">
             <h3>Confiança Cred</h3>
             <p>
               <strong>Endereço:</strong><br />Rua Alexandre Salomão, 1129 -
@@ -329,7 +535,8 @@
             </p>
           </address>
 
-          <div class="contato-whatsapp">
+          <div class="contato-whatsapp" data-reveal data-atraso="2">
+            <p class="contato-chamada">Prefere conversar agora? Escolha com quem falar:</p>
             <a
               class="botao-whatsapp"
               href="https://wa.me/5518997908234?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20da%20Confian%C3%A7a%20Cred%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20op%C3%A7%C3%B5es%20de%20empr%C3%A9stimo%20dispon%C3%ADveis."
@@ -374,9 +581,38 @@
     </main>
 
     <footer>
-      <p>Confiança Cred - Andradina-SP</p>
+      <div class="rodape-interno">
+        <div class="rodape-marca">
+          <img src="images/logo-nome.png" alt="Confiança Cred" />
+          <p>Informação para decidir melhor.</p>
+        </div>
+        <nav class="rodape-links" aria-label="Links do rodapé">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#simulador">Simulação</a>
+          <a href="#faq">Dúvidas</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+      <p class="rodape-copy">Confiança Cred - Andradina-SP</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Botão de voltar ao topo -->
+    <a href="#inicio" class="voltar-topo" aria-label="Voltar ao topo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+    </a>
+
+    <!-- Visualizador da galeria -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar mídia da galeria" hidden>
+      <button type="button" class="lightbox-fechar" aria-label="Fechar">×</button>
+      <button type="button" class="lightbox-nav lightbox-anterior" aria-label="Anterior">‹</button>
+      <figure class="lightbox-conteudo">
+        <div class="lightbox-midia"></div>
+        <figcaption class="lightbox-legenda"></figcaption>
+      </figure>
+      <button type="button" class="lightbox-nav lightbox-proximo" aria-label="Próximo">›</button>
+    </div>
+
+    <script src="script.js?v=20261113-pro"></script>
   </body>
 </html>
